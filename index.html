@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Payment Methods Comparison</h1>
+        <p class="subtitle">Compare transaction costs and processing times across different payment methods</p>
+    </header>
+
+    <main>
+        <section id="comparison-tool">
+            <h2>Compare Payment Methods</h2>
+            <div class="amount-input">
+                <label class="label" for="amount">Enter Transaction Amount ($)</label>
+                <input type="number" id="amount" value="100">
+                <button id="calculate">Calculate Fees</button>
+            </div>
+            
+            <div class="comparison-grid" id="results">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="features-table">
+            <h2>Detailed Comparison</h2>
+            <div class="table-container">
+                <table id="comparison-table">
+                    <!-- Table will be populated by JavaScript -->
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="disclaimer">
+            <h4>Disclaimer</h4>
+            <p>This tool is for informational purposes only. The information presented here may not be accurate or up-to-date. 
+               Payment processing fees, transaction times, and other metrics can vary based on multiple factors including but not limited to:
+               location, business volume, account type, and market conditions.</p>
+            <p>This is not financial advice. Always do your own research and due diligence before choosing a payment processor 
+               or making any financial decisions. Consult with financial and legal professionals for advice specific to your situation.</p>
+            <p>Some links provided may be affiliate links. We may earn a commission if you make a purchase through these links, 
+               at no additional cost to you.</p>
+            <p>All product names, logos, brands, and properties are trademarks™ or registered® trademarks of their respective holders. 
+               Use of them does not imply any affiliation with or endorsement by them.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

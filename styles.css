@@ -1,0 +1,338 @@
+:root {
+    --primary-color: black;
+    --secondary-color: blue;
+    --background-color: #23315a;
+    --text-color: #333;
+    --secondary-text-color: #999;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--secondary-text-color);
+}
+
+.subtitle {
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.amount-input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-method {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.payment-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.payment-method h3 {
+    margin: 0 0 1.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.fee-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+.fee, .total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.amount {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.processing-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.processing-time .value {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+.table-container {
+    margin-top: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+/* Add tooltip styling */
+th[title] {
+    cursor: help;
+    border-bottom: 1px dotted #666;
+}
+
+/* Center the Nakamoto Coefficient column */
+td:last-child,
+th:last-child {
+    text-align: center;
+}
+
+/* Improve tooltip styling */
+td[title],
+th[title] {
+    cursor: help;
+    border-bottom: 1px dotted #666;
+}
+
+/* Make Nakamoto Coefficient column narrower */
+th:last-child,
+td:last-child {
+    width: 90px;
+    min-width: 90px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Update header text to wrap nicely */
+th:last-child {
+    line-height: 1.2;
+    padding: 0.5rem;
+}
+
+/* Style the links */
+.payment-method h3 a,
+table td a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.payment-method h3 a:hover,
+table td a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.disclaimer {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.disclaimer h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.disclaimer p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Improve table cell colors */
+td[style*="background-color"] {
+    transition: background-color 0.3s;
+}
+
+/* Add slight transparency to background colors */
+td[style*="background-color"] {
+    opacity: 0.85;
+}
+
+/* Ensure text is readable on colored backgrounds */
+td[style*="background-color"] {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Make certain columns narrower */
+th:nth-child(5), /* Privacy */
+th:nth-child(6), /* Decentralized */
+th:nth-child(7), /* NC */
+th:nth-child(10) { /* Integration */
+    width: 90px;
+    min-width: 90px;
+}
+
+/* Add horizontal scroll indicator */
+.table-container::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    font-size: 20px;
+    color: var(--secondary-text-color);
+    animation: bounce 1s infinite;
+    opacity: 0.5;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+/* Make input and button full width on mobile */
+@media (max-width: 600px) {
+    .amount-input {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .amount-input input[type="number"],
+    .amount-input button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    /* Increase tap target size on mobile */
+    .amount-input button {
+        padding: 0.8rem;
+    }
+}
+
+/* Optional: limit input width on desktop */
+@media (min-width: 601px) {
+    input[type="number"] {
+        width: 150px;
+    }
+} 
