@@ -98,7 +98,7 @@ const paymentMethods = {
     base: {
         name: 'USDC (Base)',
         url: 'https://base.org',
-        fee: 0.0005,
+        fee: 0.003,
         feeStructure: 'fixed',
         transactionTime: '15 seconds',
         inflation: '2.7% (USD-pegged)',
