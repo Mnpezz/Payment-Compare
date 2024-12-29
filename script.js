@@ -532,45 +532,35 @@ function updateComparisonTable() {
 function getFeeColor(actualFee, feeStructure, amount = 100) {
     // Calculate fee as a percentage of the total amount
     const feePercentage = (actualFee / amount) * 100;
-    console.log(`Fee: $${actualFee}, Percentage: ${feePercentage.toFixed(2)}%`);
 
     // Hard limits on absolute fee amounts regardless of percentage
     if (actualFee > 20) {
-        console.log('Fee over $20 - always red');
         return '#f44336';
     }
     if (actualFee > 10) {
-        console.log('Fee over $10 - always salmon');
         return '#ffccc7';
     }
 
     // For smaller amounts, use percentage-based coloring
     if (feePercentage === 0) {
-        console.log('Zero fee - brightest green');
         return '#47c54d';
     }
     if (feePercentage <= 0.1) {
-        console.log('Under 0.1% - light green');
         return '#72ea7d';
     }
     if (feePercentage <= 0.5 && actualFee <= 3) {
-        console.log('Under 0.5% and under $3 - green');
         return '#c6f6c8';
     }
     if (feePercentage <= 1.0 && actualFee <= 6) {
-        console.log('Under 1% and under $6 - yellow');
         return '#ffc0a3';
     }
     if (feePercentage <= 2.0 && actualFee <= 9) {
-        console.log('Under 2% and under $9 - light orange');
         return '#ffd5cc';
     }
     if (feePercentage <= 3.0 && actualFee <= 12) {
-        console.log('Under 3% and under $12 - salmon');
         return '#ffccc7';
     }
     
-    console.log('High fee or percentage - red');
     return '#f44336';
 }
 
