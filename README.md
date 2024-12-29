@@ -1,6 +1,6 @@
 # Payment Methods Comparison Tool
 
-Live Demo: [https://mnpezz.github.io/payment-compare/](https://mnpezz.github.io/payment-compare/)
+Live Demo: [https://mnpezz.github.io/Payment-Compare/](https://mnpezz.github.io/Payment-Compare/)
 
 A web-based tool that helps merchants compare different payment processing methods, including traditional payment processors and cryptocurrencies. Compare fees, processing times, and other important metrics across various payment solutions.
 
